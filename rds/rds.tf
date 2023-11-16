@@ -46,16 +46,3 @@ resource "aws_db_instance" "rds" {
   db_subnet_group_name = aws_db_subnet_group.db_subnet_group.id
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
 }
-# resource "aws_db_instance" "rds" {
-#   allocated_storage    = 10
-#   db_name              = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-rds"
-#   engine               = "mysql"
-#   engine_version       = "5.7"
-#   instance_class       = "db.t2.micro"
-#   username             = "foo"
-#   password             = "foobarbaz"
-#   parameter_group_name = "default.mysql5.7"
-#   skip_final_snapshot  = true
-#   db_subnet_group_name = aws_db_subnet_group.db_subnet_group.id
-#   vpc_security_group_ids = [aws_security_group.rds_sg.id]
-# }
